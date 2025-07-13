@@ -1,0 +1,85 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/vijaya-wadhai/python--project/blob/main/jungle_adventure\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lIYdn1woOS1n",
+        "outputId": "3630b67c-5625-4ae9-e3f4-81ac33517b23"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Welcome to Jungle Adventure!\n",
+            "You are at a fork in the road.\n",
+            "Do you go left or right? left\n",
+            "You see a river ahead.\n",
+            "Do you swim or walk along the bank? swim\n",
+            "You got attacked by a crocodile. Game Over.\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Text Adventure Game - by Vijaya Wadhai\n",
+        "\n",
+        "print(\"Welcome to Jungle Adventure!\")\n",
+        "print(\"You are at a fork in the road.\")\n",
+        "\n",
+        "choice = input(\"Do you go left or right? \").lower()\n",
+        "\n",
+        "if choice == \"left\":\n",
+        "    print(\"You see a river ahead.\")\n",
+        "    river_choice = input(\"Do you swim or walk along the bank? \").lower()\n",
+        "\n",
+        "    if river_choice == \"swim\":\n",
+        "        print(\"You got attacked by a crocodile. Game Over.\")\n",
+        "    elif river_choice == \"walk\":\n",
+        "        print(\"You found a bridge and crossed safely. You Win!\")\n",
+        "    else:\n",
+        "        print(\"You did nothing. Time passed and you lost.\")\n",
+        "\n",
+        "elif choice == \"right\":\n",
+        "    print(\"A bear is standing in your path.\")\n",
+        "    bear_choice = input(\"Do you run or stay still? \").lower()\n",
+        "\n",
+        "    if bear_choice == \"run\":\n",
+        "        print(\"The bear chased and caught you. Game Over.\")\n",
+        "    elif bear_choice == \"stay\":\n",
+        "        print(\"The bear ignored you and walked away. You Win!\")\n",
+        "    else:\n",
+        "        print(\"You panicked and the bear noticed. Game Over.\")\n",
+        "\n",
+        "else:\n",
+        "    print(\"You stood there too long. Night came. Game Over.\")\n"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "scratchpad",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
